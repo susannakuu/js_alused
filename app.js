@@ -1,36 +1,42 @@
-const name = 'Susanna';
-const age = 25;
-const occupation = 'õpilane';
-const city = 'Tartu';
+const numbers = [45, 22, 90, 683, 6];
+const numbers2 = new Array(22, 55, 72, 3);
+const fruit = ['õun', 'banaan'];
+const mixed = [22, 'tere', true, undefined, null, {a:1, b:2}, new Date()];
 
 
+let val;
 
-let html;
+val = numbers.lenght; //massiivi pikkus
+val = Array.isArray(numbers); //kas on massiiv
 
+val = numbers[3]; //kindel element
+val = numbers[0];
 
-	
+numbers[2] = 100;
 
-html = '<ul>' +
-			'<li>' + name + '</li>' +
-			'<li>' + age + '</li>' + 
-			'<li>' + occupation + 
-			'<li>' + city + '</li>' +
+val = numbers.indexOf(36); //elemendi järgi index
 
-		'</ul>';
-		
-// es6 - template strings
+numbers.push(250);  //element massiivi lõppu
+numbers.unshift(90);  //ette
+numbers.pop();  //lõpust maha
+numbers.shift();  //eest maha
 
-html = `
-	<ul>
-		<li>Name: ${name}</li>
-		<li>Age: ${age}</li>
-		<li>Occupation: ${occupation}</li>
-		<li>City: ${city}</li>
-	</ul>
-	`;
+//console.log(numbers);
 
 
+//numbers.splice(1, 3); //elementide lõikamine
 
-console.log(html);
+//numbers.reverse(); //tagurpidi massiiv
 
-document.body.innerHTML = html;
+val = numbers.concat(numbers2); //ühendamine
+
+val = fruit.sort(); //sortimine
+
+console.log(numbers);
+
+//val = numbers.sort(function(x, y){
+	reurn x - y;
+//}); 
+
+
+console.log(val);
