@@ -1,42 +1,42 @@
-const numbers = [45, 22, 90, 683, 6];
-const numbers2 = new Array(22, 55, 72, 3);
-const fruit = ['õun', 'banaan'];
-const mixed = [22, 'tere', true, undefined, null, {a:1, b:2}, new Date()];
-
+const person = {
+	fname: 'Kadi',
+	lname: 'Tamm',
+	age: 36,
+	email: 'kadi.tamm@gmail.com',
+	hobbies: ['tantsimine', 'muusika'],
+	address: {
+		city: 'Tallinn',
+		county: 'Harjumaa'
+	},
+	getBirthYear: function() {
+		return 2021 - this.age;
+	}
+};
 
 let val;
 
-val = numbers.lenght; //massiivi pikkus
-val = Array.isArray(numbers); //kas on massiiv
+val = person;
 
-val = numbers[3]; //kindel element
-val = numbers[0];
+val = person.fname;
+val = person['lname'];
+val = person.hobbies[1];
+val = person.address['city'];
+val = person.getBirthYear();
 
-numbers[2] = 100;
+const people = [
+	{name: 'Kadi', age: 36},
+	{name: 'Peeter', age: 40},
+	{name: 'Mait', age: 15}
 
-val = numbers.indexOf(36); //elemendi järgi index
+];
 
-numbers.push(250);  //element massiivi lõppu
-numbers.unshift(90);  //ette
-numbers.pop();  //lõpust maha
-numbers.shift();  //eest maha
+val = people;
 
-//console.log(numbers);
+for(let i = 0; i < people.lenght; i++){
+	console.log(people[i].name);
+}
 
 
-//numbers.splice(1, 3); //elementide lõikamine
-
-//numbers.reverse(); //tagurpidi massiiv
-
-val = numbers.concat(numbers2); //ühendamine
-
-val = fruit.sort(); //sortimine
-
-console.log(numbers);
-
-//val = numbers.sort(function(x, y){
-	reurn x - y;
-//}); 
 
 
 console.log(val);
