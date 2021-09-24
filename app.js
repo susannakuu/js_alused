@@ -1,21 +1,36 @@
-const eesnimi = 'Susanna';
-const perenimi = 'Kuusemaa';
-const age = '25';
-const text = 'Tere, olen mina!'
-const tags = 'igast'
-
-let val;
-
-//concatenation
-val = eesnimi + ' ' + perenimi;
-val = val + ' ' + age;
-val = text + 'Teen ' + tags + ' asju!';
-val = eesnimi.toUpperCase();
-val = perenimi[0];
-val = eesnimi.charAt(eesnimi.length -1);
-val = text.split(',');
+const name = 'Susanna';
+const age = 25;
+const occupation = 'õpilane';
+const city = 'Tartu';
 
 
 
+let html;
 
-console.log(val);
+
+	
+
+html = '<ul>' +
+			'<li>' + name + '</li>' +
+			'<li>' + age + '</li>' + 
+			'<li>' + occupation + 
+			'<li>' + city + '</li>' +
+
+		'</ul>';
+		
+// es6 - template strings
+
+html = `
+	<ul>
+		<li>Name: ${name}</li>
+		<li>Age: ${age}</li>
+		<li>Occupation: ${occupation}</li>
+		<li>City: ${city}</li>
+	</ul>
+	`;
+
+
+
+console.log(html);
+
+document.body.innerHTML = html;
