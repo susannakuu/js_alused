@@ -5,9 +5,9 @@ if(tingimus) {
 	// tegevused else puhul
 }
 
-
+*/
 const id = 100;
-
+/*
 // == - võrdub
 // != - ei võrdu
 // === - võrdub ja tüübikontroll
