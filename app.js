@@ -1,42 +1,29 @@
-const person = {
-	fname: 'Kadi',
-	lname: 'Tamm',
-	age: 36,
-	email: 'kadi.tamm@gmail.com',
-	hobbies: ['tantsimine', 'muusika'],
-	address: {
-		city: 'Tallinn',
-		county: 'Harjumaa'
-	},
-	getBirthYear: function() {
-		return 2021 - this.age;
-	}
-};
-
 let val;
 
-val = person;
 
-val = person.fname;
-val = person['lname'];
-val = person.hobbies[1];
-val = person.address['city'];
-val = person.getBirthYear();
+const today = new Date();
 
-const people = [
-	{name: 'Kadi', age: 36},
-	{name: 'Peeter', age: 40},
-	{name: 'Mait', age: 15}
+val = today.getMonth();  //0 on jaanuar
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime(); //millisekundite arv alates unixi loomisest
 
-];
+let birthday = new Date('09/27/2001 11:00:00');
+birthday = new Date('September 27 2001');
 
-val = people;
+birthday.setMonth(2); //0-jaanuar
+birthday.setDate(12);
+birthday.setFullYear(1996);
+birthday.setHours(17);
+birthday.setMinutes(17);
+birthday.setSeconds(17);
 
-for(let i = 0; i < people.lenght; i++){
-	console.log(people[i].name);
-}
 
 
-
-
+console.log(birthday);
 console.log(val);
