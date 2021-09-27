@@ -1,29 +1,68 @@
-let val;
+/*
+if(tingimus) {
+	// tegevused if puhul
+} else {
+	// tegevused else puhul
+}
 
 
-const today = new Date();
+const id = 100;
 
-val = today.getMonth();  //0 on jaanuar
-val = today.getDate();
-val = today.getDay();
-val = today.getFullYear();
-val = today.getHours();
-val = today.getMinutes();
-val = today.getSeconds();
-val = today.getMilliseconds();
-val = today.getTime(); //millisekundite arv alates unixi loomisest
+// == - võrdub
+// != - ei võrdu
+// === - võrdub ja tüübikontroll
+// !== - ei võrdu ja tüübikontroll
 
-let birthday = new Date('09/27/2001 11:00:00');
-birthday = new Date('September 27 2001');
+let testId;
 
-birthday.setMonth(2); //0-jaanuar
-birthday.setDate(12);
-birthday.setFullYear(1996);
-birthday.setHours(17);
-birthday.setMinutes(17);
-birthday.setSeconds(17);
+if(typeof testId !== 'undefined'){
+	console.log(`id on ${testId}`);
+} else {
+	console.log('id puudub');
+}
+*/
+/*
 
+if(id > 100) {
+	console.log(`id on ${id} - suurem kui 100`);
 
+} else {
+	console.log(`id on ${id} - väiksem või võrdne 100`);
+}
+*/
+/*
+const color = "red";
 
-console.log(birthday);
-console.log(val);
+if(color=== 'red') {
+	console.log('Stop!');
+} else if(color === 'yellow'){
+	console.log('Attention');
+} else (color === "green"){
+	console.log('Go!')
+}
+*/
+
+const name = 'Kadi';
+const age = 15;
+if(age > 0 && age <=22){
+	console.log(`${name} on laps`);
+} else if(age > 12 && age < 18){
+	console.log(`${name} on nooruk`);
+} else {
+	console.log(`${name} on täiskasvanud`);
+}
+
+if(age < 18 || age > 65){
+	console.log(`${name} ei saa registreeruda`);
+} else {
+	console.log(`${name} on registreeritud`);
+}
+
+// ? - ternary operaator
+console.log(id === 100 ? 'õige' : 'vale');
+
+// ilma {}
+if(id === 100)
+	console.log('korras');
+else
+	console.log('ei ole korras');
