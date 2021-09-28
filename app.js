@@ -1,52 +1,26 @@
-// funktsiooni defineerimine (deklareerimine)
-function greeting(firstname = 'Kadi', lastname = 'Tamm'){
-	/*if(typeof firstname === 'undefined'){
-		firstname ='Kadi';
-	}
-	if(typeof lastname === 'undefined'){
-		lastname ='Tamm';
-	}*/
-	return 'Tere, ' + firstname + ' ' + lastname;
-}
-//funktsiooni tööle kutsumine
+let val;
 
-let greet = greeting('Susanna', 'Kuu');
-console.log(greet);
-
-console.log();
-// funktsioon avaldise kujul
-const square = function(number = 3){
-	return number * number;
-}
-
-console.log(square());
+val = document;
+val = document.all;
+val = document.all[5]
+val = document.all.length;
 
 
-// IIFE Immediately Invokable Function Expression
-(function(){
-	console.log('function ran');
-})();
+val = document.head;
+val = document.body;
 
-(function(name){
-	console.log('Tere ' + name);
-})('Susanna');
+val = document.doctype;
 
-console.log();
-// objekti siseselt defineeritud funktsioon
-const todo = {
-	add: function(){
-		console.log('add todo nr...');
-	},
-	edit: function(id){
-		console.log(`edit todo nr ${id}...`);
-	},
-	delete: function(){
-		console.log('delete todo...');
-	}
-}
+val = document.domain;
+val = document.URL;
+val = document.characterSet;
+val = document.contentType;
 
-todo.add();
-todo.edit(5);
-todo.delete();
+val = document.forms;
+val = document.forms[0];
+val = document.forms.method;
+val = document.forms.action;
+val = document.forms[0].id;
 
 
+console.log(val);
