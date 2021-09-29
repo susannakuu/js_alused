@@ -1,30 +1,17 @@
 let val
-//document.getElementById();
 
-val = document.getElementById("task-title");
-val = document.getElementById("task-title").id;
-val = document.getElementById("task-title").className;
+val = document.querySelectorAll('li');
 
-const taskTitle = document.getElementById("task-title");
+const oddLi = document.querySelectorAll('li:nth-child(odd)');
 
-taskTitle.style.color = "purple";
-//taskTitle.style.display = "none";   //võtab maha applied stilingud
+const evenLi = document.querySelectorAll('li:nth-child(even)');
 
+evenLi.forEach(function(li){
+	li.style.background = '#4073FF';
+});
 
-// sisu muutmine
-taskTitle.textContent = "My Tasks";
-taskTitle.innerText = "Yada-Yada";
-//taskTitle.innerHTML = '<span style="color: red;">My Tasks</span>'
+oddLi.forEach(function(li){
+	li.style.background = '#96C3EB';
+});
 
-//
-
-val = document.querySelector('#task-title');
-val = document.querySelector('.card-title');
-
-document.querySelector('li').style.color = 'pink';
-document.querySelector('li:last-child').style.color = 'fuchsia';
-document.querySelector('li:nth-child(odd)').style.background = '#ffff';
-
-
-
-console.log();
+console.log(even);
