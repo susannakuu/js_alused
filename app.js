@@ -1,53 +1,28 @@
-//elemendi leidmine
+// event elements
+const taskList = document.querySelector('ul');
 
-const form = document.querySelector('form'); 
-const taskInput = document.querySelector('#task');
-const heading = document.querySelector('h4');
+// click elemendi kustutamiseks
+taskList.addEventListener('click', deleteTask);
 
-taskInput.value = '';
-//submit
-//form.addEventListener('submit', runEvent);
+const delBtn = document.querySelector('#delall');
+delBtn.addEventListener('click', deleteTasks);
 
-//keyboard
-//taskInput.addEventListener('keydown', runEvent);
-//taskInput.addEventListener('keyup', runEvent);
-//taskInput.addEventListener('keypress', runEvent);
-
-//input väljas fokuseerimine ja välja fokuseerimine
-//taskInput.addEventListener('focus', runEvent);
-//taskInput.addEventListener('blur', runEvent);
-
-//taskInput.addEventListener('cut', runEvent);
-//taskInput.addEventListener('paste', runEvent);
-//taskInput.addEventListener('input', runEvent);
-
-
-
-
-function runEvent(e) {
-	console.log(`Event type: ${e.type}`);
-	console.log(e.target.value);
-	heading.innerText = e.target.value;
-	//e.preventDefault();
+function deleteTask(e) {
+	if(e.target.textContent == 'x'){
+		if(confirm()){
+			e.target.parentElement.remove();
+		}
+	}
 }
-form.addEventListener('submit', addTask);
 
-function addTask(e) {
-	const li = document.createElement('li');
-	const list = document.querySelector('ul');
+function deleteTasks(e) {
+	/*
+	console.log(e.target);
+	taskList.innerHTML = '';
+	*/
+	while(taskList.firstChild){
+		taskList.removeChild(taskList.firstChild);
+	} 
+}	
+	
 
-	li.className = 'collection-item';
-	li.appendChild(document.createTextNode(taskInput.value));
-
-	const link = document.createElement('a');
-	link.className = 'secondary-content';
-	link.appendChild(document.createTextNode('x'));
-	link.setAttribute('href', '#');
-
-	li.appendChild(link);
-	list.appendChild(li);
-
-	taskInput.value ='';
-
-	e.preventDefault();
-}
